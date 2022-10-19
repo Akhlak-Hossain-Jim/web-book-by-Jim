@@ -34,11 +34,15 @@ export default function AttributePage({ data }) {
             ) : d.includes("$b$") ? (
               <p>
                 {React.Children.toArray(
-                  d
-                    .split("$b$")
-                    .map((item, index) =>
-                      index ? <strong>{item}</strong> : item
-                    )
+                  d.split("$b$").length > 1 ? (
+                    d
+                      .split("$b$")
+                      .map((item, index) =>
+                        index % 2 !== 0 ? <strong>{item}</strong> : item
+                      )
+                  ) : (
+                    <strong>{d.replace("$b$")}</strong>
+                  )
                 )}
               </p>
             ) : (
