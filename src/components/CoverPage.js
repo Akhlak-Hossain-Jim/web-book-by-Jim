@@ -85,6 +85,10 @@ const Container = styled.section`
         height: 100%;
         width: auto;
         object-position: center;
+        @media (max-width: 548px) {
+          width: 100%;
+          object-fit: cover;
+        }
       }
     }
     &_pageText {
