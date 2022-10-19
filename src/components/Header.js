@@ -31,7 +31,7 @@ export default function Header({
                     onClick={() => setToggler(false)}
                   >
                     <a
-                      href={`#${lastRead}`}
+                      href={`#${lastRead}l`}
                       style={{
                         textAlign: "center",
                         textDecoration: "none",
@@ -85,10 +85,7 @@ export default function Header({
                 </div>
               </div>
               <div className="index">
-                <h1>Contents</h1>
-                <a onClick={() => setToggler(false)} href="#titlePage">
-                  Title Page
-                </a>
+                <h4>Contents</h4>
                 {React.Children.toArray(
                   content.map((data) => (
                     <a
