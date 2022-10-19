@@ -1,13 +1,92 @@
-body {
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;500;600;700&display=swap");
+
+*,
+*::after,
+*::before {
+  padding: 0;
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
+  box-sizing: border-box;
+  transition: all 300ms ease-in-out;
+}
+*::-webkit-scrollbar {
+  width: 5px;
+  height: 5px;
+  border-radius: 4px;
+  color: teal;
+}
+*::-webkit-scrollbar-thumb {
+  border: 5px solid teal;
+  border-radius: 4px;
+  background: transparent;
+}
+
+:root {
+  --gray-dark: #797979;
+  --gray-dark-shadow: 0 0 10px #676767;
+  --nav-bg: rgba(0, 0, 0, 0.1);
+  --nav-deep-t: rgba(0, 255, 255, 0.5);
+
+  --dark: #161622;
+  --dark-shadow: 5px 5px 16px #09090e, -5px -5px 16px #232336;
+
+  --old: #f9d8a7;
+  --old-shadow: 5px 5px 16px #d4b88e, -5px -5px 16px #fff8c0;
+
+  --light: #ece9e4;
+  --light-shadow: 5px 5px 16px #a3a19d, -5px -5px 16px #fff;
+
+  /* initial values */
+
+  --bg: var(--light);
+  --color: var(--dark);
+  --shadow: var(--light-shadow);
+}
+
+body {
+  font-family: "Open Sans", sans-serif;
+  font-size: 16px;
+  font-weight: 500;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+.lite {
+  --bg: var(--light);
+  --color: var(--dark);
+  --shadow: var(--light-shadow);
+}
+.old {
+  --bg: var(--old);
+  --color: var(--dark);
+  --shadow: var(--old-shadow);
+}
+.dark {
+  --bg: var(--dark);
+  --color: var(--light);
+  --shadow: var(--dark-shadow);
+}
+
+h1 {
+  font-size: 4rem;
+}
+h2 {
+  font-size: 3rem;
+}
+h3 {
+  font-size: 2.5rem;
+}
+h4 {
+  font-size: 2rem;
+}
+h5 {
+  font-size: 1.5rem;
+}
+h6 {
+  font-size: 1rem;
+}
+
+section {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 24px;
 }
